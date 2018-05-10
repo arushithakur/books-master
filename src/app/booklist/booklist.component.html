@@ -1,0 +1,90 @@
+
+<!-- 
+<div class="list-group-item clearfix" *ngFor="let book of books">
+  <div class="pull-left">
+ <h4 class="list-group-item-heading">Book name:{{book.name}}</h4>
+ <p class="list-group-item-text">Author:{{book.author}}</p>
+ <p class="list-group-item-text">Genre:{{book.genre}}</p>
+  </div>
+  <! <span class="pull-right">
+  <img [src]="receipe.imagePath" alt="" class="img-responsive" style="max-height:50px;">
+
+  </span> -->
+<!-- </div> --> 
+<!-- <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="list-group">
+        <a
+       
+          class="list-group-item"
+          *ngFor="let book of books"  (click)= "gotoBookDesc(book.id,book.name)">
+          {{ book.name }}
+        </a>
+      </div>
+    </div>
+    </div>
+<div class="row">
+  &nbsp;
+  <div class="col-md-12">
+      &nbsp;
+    <button class="btn btn-primary"  (click)='goToForm()'>Go to Form</button>
+  </div>
+</div> -->
+
+<div class="row">
+  <div class="col-xs-12 col-md-12">
+      <table class="table table-bordered" >
+          <thead>
+            <tr>
+              <th>SNo.</th>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Genre</th>
+              <th>Picture</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let book of books ; let i=index">
+            <tr>
+              <td>{{i+1}}</td>
+              <td>{{book.name}}</td>
+              <td>{{book.author}}</td>
+              <td>{{book.genre}}</td>
+              <td class="text-center"><img [src]="book.file" class="img-responsive" style="max-height:100px; display:inline;"></td>
+              <td><span>
+                 <a
+               (click)= "gotoBookDesc(book.id)" style="cursor: pointer;">
+                View|
+              </a></span>
+              <span>
+                  <a
+                (click)= "updateBook(book.id,book.name)" style="cursor: pointer;" >
+                 Update|
+               </a></span>
+             
+              <span>
+                  <a
+                (click)= "deleteBook(book.id)" style="cursor: pointer;" >
+                Delete
+               </a></span>
+            </td>
+              
+            </tr>
+          </tbody>
+        </table>
+
+  </div>
+</div>
+<div class="row">
+    &nbsp;
+    <div class="col-md-12">
+        &nbsp;
+      <button class="btn btn-primary"  (click)='goToForm()'>Add New Book</button>
+    </div>
+  </div>
+  
+
+
+
+
+

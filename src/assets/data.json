@@ -1,0 +1,19 @@
+
+[{"id":1,
+"name":"Matilda",
+"author":"Roald Dahl",
+"genre":"Fiction",
+  "file":"../../assets/matilda.jpg"
+  },
+
+  {"id":2,
+    "name":"The Oath of Vayuputras",
+    "author":"Amish Tripathi",
+    "genre":"Fiction",
+  "file":"../../assets/The_Oath_of_the_Vayuputras.jpg"
+},
+  {"id":3,
+    "name":"Nancy Drew",
+    "author":"Carolyn Keene",
+    "genre":"Fiction",
+  "file":"../../assets/nancydrew.jpeg"}]
